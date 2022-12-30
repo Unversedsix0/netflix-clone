@@ -28,16 +28,14 @@ const Row =({title, path,isLarge}) => {
       <div className='row-cards'>
         {movies?.map(movie =>{
           return(
-
-            <img className={`movie-card ${isLarge && 'movie-card-large' }`} 
+            <img 
+            className={`movie-card ${isLarge && 'movie-card-large' }`} 
             key={movie.id} 
             src={`${imageHost}${isLarge ? movie.backdrop_path : movie.poster_path }`} 
-            alt={movie.name}></img>
-          )
+            alt={movie.name}
+            ></img>
+          );
         })}
-        <div>
-          {movies?.title || movies?.name || movies?.original_name}
-        </div>
       </div>
     </div>
   )
