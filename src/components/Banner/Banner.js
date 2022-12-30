@@ -19,6 +19,10 @@ const Banner = () => {
     }
   };
 
+  function truncate(str, n) {
+    return str?.length > n ? str.substring(0, n - 1) + "..." : str;
+  }
+
   useEffect(() => {
     fetchRandomMovie();
     console.log(movie);
@@ -38,11 +42,13 @@ const Banner = () => {
           {movie?.title || movie?.name || movie?.original_name}
         </h1>
         <div className="banner-button-container">
-          <div className="banner-button">Assistir</div>
-          <div className="banner-button">Minha Lista</div>
+          <button className="banner-button">Assistir</button>
+          <button className="banner-button">Minha Lista</button>
         </div>
 
-        <div className="banner-description"></div>
+        <div className="banner-description">
+        <h2>{truncate(movie?.overview, 150)}</h2>
+        </div>
       </div>
     </header>
   );
