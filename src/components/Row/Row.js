@@ -17,7 +17,7 @@ const Row =({title, path,isLarge}) => {
     if(trailerUrl){
       setTrailerUrl('');
     }else{
-      movieTrailer(movie?.title || movie?.name || movie?.original_name)
+      movieTrailer(   movie?.title || movie?.name || movie?.original_name || "")
       .then((url =>{
         setTrailerUrl(url);
       }))
