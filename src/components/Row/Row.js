@@ -4,7 +4,7 @@ import { getMovies } from '../../api';
 import ReactPlayer from 'react-player';
 import movieTrailer from 'movie-trailer';
 
-const Row =({title, path,isLarge}) => {
+export const Row =({title, path,isLarge}) => {
 
 
   const imageHost='https://image.tmdb.org/t/p/original';
@@ -70,4 +70,3 @@ const Row =({title, path,isLarge}) => {
   
 }
 
-export default Row

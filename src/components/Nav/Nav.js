@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import "./Nav.css";
-function Nav() {
+
+
+export const Nav= () => {
   const [show, setShow] = React.useState(false);
 
   useEffect(() => {
@@ -25,4 +27,3 @@ function Nav() {
   );
 }
 
-export default Nav;
